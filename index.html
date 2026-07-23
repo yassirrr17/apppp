@@ -25,8 +25,297 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    <style></head>
+<body class="light-mode" data-lang="en" id="body-root">
+    <a href="#main-app" class="skip-link">Skip to main content</a>
+    <noscript>
+        <div class="noscript-fallback">
+            <h1>Lunara requires JavaScript</h1>
+            <p>Please enable JavaScript in your browser to use Lunara.</p>
+        </div>
+    </noscript>
+    <div id="app" role="application" aria-label="Lunara Wellness App">
+
+        <!-- ONBOARDING -->
+        <section id="onboarding" class="screen active" role="region" aria-label="Onboarding">
+            <div class="onboarding-container">
+                <div class="onboarding-step active" data-step="1" role="tabpanel" aria-labelledby="ob-step-1">
+                    <div class="ob-gradient-header">
+                        <div class="ob-moon" aria-hidden="true">&#9790;</div>
+                        <h1 class="ob-title" id="ob-step-1" data-en="Lunara" data-ar="&#1604;&#1608;&#1606;&#1575;&#1585;&#1575;">Lunara</h1>
+                        <p class="ob-subtitle" data-en="Your gentle companion through perimenopause and menopause" data-ar="&#1585;&#1601;&#1610;&#1602;&#1578;&#1603; &#1575;&#1604;&#1604;&#1591;&#1610;&#1601;&#1577; &#1582;&#1604;&#1575;&#1604; &#1601;&#1578;&#1585;&#1577; &#1605;&#1575; &#1602;&#1576;&#1604; &#1575;&#1606;&#1602;&#1591;&#1575;&#1593; &#1575;&#1604;&#1591;&#1605;&#1579; &#1608;&#1575;&#1606;&#1602;&#1591;&#1575;&#1593;&#1607;">Your gentle companion through perimenopause and menopause</p>
+                    </div>
+                    <div class="ob-content">
+                        <p class="ob-text" data-en="We are here to help you feel understood, supported, and never alone." data-ar="&#1606;&#1581;&#1606; &#1607;&#1606;&#1575; &#1604;&#1605;&#1587;&#1575;&#1593;&#1583;&#1578;&#1603; &#1593;&#1604;&#1609; &#1575;&#1604;&#1588;&#1593;&#1608;&#1585; &#1576;&#1575;&#1604;&#1578;&#1601;&#1607;&#1605; &#1608;&#1575;&#1604;&#1583;&#1593;&#1605; &#1608;&#1571;&#1606;&#1603; &#1604;&#1587;&#1578; &#1608;&#1581;&#1583;&#1603; &#1571;&#1576;&#1583;&#1575;&#1611;.">We are here to help you feel understood, supported, and never alone.</p>
+                        <button class="btn-primary" onclick="nextOnboardingStep()" aria-label="Begin your wellness journey">
+                            <span data-en="Begin" data-ar="&#1575;&#1576;&#1583;&#1574;&#1610;">Begin</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="onboarding-step hidden" data-step="2" role="tabpanel" aria-labelledby="ob-step-2">
+                    <div class="ob-top">
+                        <div class="ob-progress" role="progressbar" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100" aria-label="Onboarding progress">
+                            <div class="ob-progress-fill" style="width:14%"></div>
+                        </div>
+                        <h2 id="ob-step-2" data-en="How old are you?" data-ar="&#1603;&#1605; &#1593;&#1605;&#1585;&#1603;&#1567;">How old are you?</h2>
+                        <p class="ob-hint" data-en="This helps us personalise your experience." data-ar="&#1607;&#1584;&#1575; &#1610;&#1587;&#1575;&#1593;&#1583;&#1606;&#1575; &#1601;&#1610; &#1578;&#1582;&#1589;&#1610;&#1589; &#1578;&#1580;&#1585;&#1576;&#1578;&#1603;.">This helps us personalise your experience.</p>
+                    </div>
+                    <div class="ob-options age-options" role="radiogroup" aria-label="Select your age range">
+                        <button class="ob-option" data-value="30-35" role="radio" aria-checked="false" onclick="selectAge(this)">30-35</button>
+                        <button class="ob-option" data-value="36-40" role="radio" aria-checked="false" onclick="selectAge(this)">36-40</button>
+                        <button class="ob-option" data-value="41-45" role="radio" aria-checked="false" onclick="selectAge(this)">41-45</button>
+                        <button class="ob-option" data-value="46-50" role="radio" aria-checked="false" onclick="selectAge(this)">46-50</button>
+                        <button class="ob-option" data-value="51-55" role="radio" aria-checked="false" onclick="selectAge(this)">51-55</button>
+                        <button class="ob-option" data-value="55+" role="radio" aria-checked="false" onclick="selectAge(this)">55+</button>
+                    </div>
+                    <div class="ob-nav">
+                        <button class="btn-text" onclick="prevOnboardingStep()" aria-label="Go back"><span data-en="Back" data-ar="&#1585;&#1580;&#1608;&#1593;">Back</span></button>
+                        <button class="btn-primary" onclick="nextOnboardingStep()" aria-label="Continue"><span data-en="Continue" data-ar="&#1575;&#1587;&#1578;&#1605;&#1585;&#1610;">Continue</span></button>
+                    </div>
+                </div>
+
+                <div class="onboarding-step hidden" data-step="3" role="tabpanel" aria-labelledby="ob-step-3">
+                    <div class="ob-top">
+                        <div class="ob-progress" role="progressbar" aria-valuenow="28" aria-valuemin="0" aria-valuemax="100" aria-label="Onboarding progress">
+                            <div class="ob-progress-fill" style="width:28%"></div>
+                        </div>
+                        <h2 id="ob-step-3" data-en="What are you experiencing?" data-ar="&#1605;&#1575; &#1575;&#1604;&#1584;&#1610; &#1578;&#1588;&#1593;&#1585;&#1610;&#1606; &#1576;&#1607;&#1567;">What are you experiencing?</h2>
+                        <p class="ob-hint" data-en="Select all that feel true for you." data-ar="&#1575;&#1582;&#1578;&#1585;&#1610; &#1603;&#1604; &#1605;&#1575; &#1610;&#1588;&#1593;&#1585;&#1603; &#1576;&#1575;&#1604;&#1589;&#1583;&#1602;.">Select all that feel true for you.</p>
+                    </div>
+                    <div class="ob-options symptom-options" role="group" aria-label="Select your symptoms">
+                        <button class="ob-option ob-card" data-value="brain-fog" role="checkbox" aria-checked="false" onclick="toggleSymptom(this)">
+                            <span class="ob-icon" aria-hidden="true">&#x1F9E0;</span>
+                            <span data-en="Brain Fog" data-ar="&#1590;&#1576;&#1575;&#1576; &#1575;&#1604;&#1583;&#1605;&#1575;&#1594;">Brain Fog</span>
+                        </button>
+                        <button class="ob-option ob-card" data-value="hot-flashes" role="checkbox" aria-checked="false" onclick="toggleSymptom(this)">
+                            <span class="ob-icon" aria-hidden="true">&#x1F525;</span>
+                            <span data-en="Hot Flashes" data-ar="&#1575;&#1604;&#1607;&#1576;&#1575;&#1578; &#1575;&#1604;&#1587;&#1575;&#1582;&#1606;&#1577;">Hot Flashes</span>
+                        </button>
+                        <button class="ob-option ob-card" data-value="anxiety" role="checkbox" aria-checked="false" onclick="toggleSymptom(this)">
+                            <span class="ob-icon" aria-hidden="true">&#x1F30A;</span>
+                            <span data-en="Anxiety" data-ar="&#1575;&#1604;&#1602;&#1604;&#1602;">Anxiety</span>
+                        </button>
+                        <button class="ob-option ob-card" data-value="sleep-issues" role="checkbox" aria-checked="false" onclick="toggleSymptom(this)">
+                            <span class="ob-icon" aria-hidden="true">&#x1F319;</span>
+                            <span data-en="Sleep Issues" data-ar="&#1605;&#1588;&#1575;&#1603;&#1604; &#1575;&#1604;&#1606;&#1608;&#1605;">Sleep Issues</span>
+                        </button>
+                        <button class="ob-option ob-card" data-value="mood-swings" role="checkbox" aria-checked="false" onclick="toggleSymptom(this)">
+                            <span class="ob-icon" aria-hidden="true">&#x1F327;</span>
+                            <span data-en="Mood Swings" data-ar="&#1578;&#1602;&#1604;&#1576;&#1575;&#1578; &#1575;&#1604;&#1605;&#1586;&#1575;&#1580;">Mood Swings</span>
+                        </button>
+                        <button class="ob-option ob-card" data-value="fatigue" role="checkbox" aria-checked="false" onclick="toggleSymptom(this)">
+                            <span class="ob-icon" aria-hidden="true">&#x1F4A4;</span>
+                            <span data-en="Fatigue" data-ar="&#1575;&#1604;&#1573;&#1585;&#1607;&#1575;&#1602;">Fatigue</span>
+                        </button>
+                        <button class="ob-option ob-card" data-value="joint-pain" role="checkbox" aria-checked="false" onclick="toggleSymptom(this)">
+                            <span class="ob-icon" aria-hidden="true">&#x1F9B5;</span>
+                            <span data-en="Joint Pain" data-ar="&#1571;&#1604;&#1605; &#1575;&#1604;&#1605;&#1601;&#1575;&#1589;&#1604;">Joint Pain</span>
+                        </button>
+                        <button class="ob-option ob-card" data-value="low-libido" role="checkbox" aria-checked="false" onclick="toggleSymptom(this)">
+                            <span class="ob-icon" aria-hidden="true">&#x1F495;</span>
+                            <span data-en="Low Libido" data-ar="&#1575;&#1606;&#1582;&#1601;&#1575;&#1590; &#1575;&#1604;&#1585;&#1594;&#1576;&#1577;">Low Libido</span>
+                        </button>
+                    </div>
+                    <div class="ob-nav">
+                        <button class="btn-text" onclick="prevOnboardingStep()" aria-label="Go back"><span data-en="Back" data-ar="&#1585;&#1580;&#1608;&#1593;">Back</span></button>
+                        <button class="btn-primary" onclick="nextOnboardingStep()" aria-label="Continue"><span data-en="Continue" data-ar="&#1575;&#1587;&#1578;&#1605;&#1585;&#1610;">Continue</span></button>
+                    </div>
+                </div>
+
+                <div class="onboarding-step hidden" data-step="4" role="tabpanel" aria-labelledby="ob-step-4">
+                    <div class="ob-top">
+                        <div class="ob-progress" role="progressbar" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100" aria-label="Onboarding progress">
+                            <div class="ob-progress-fill" style="width:42%"></div>
+                        </div>
+                        <h2 id="ob-step-4" data-en="What matters most to you?" data-ar="&#1605;&#1575; &#1575;&#1604;&#1571;&#1603;&#1579;&#1585; &#1571;&#1607;&#1605;&#1610;&#1577; &#1604;&#1603;&#1567;">What matters most to you?</h2>
+                    </div>
+                    <div class="ob-options goal-options" role="group" aria-label="Select your wellness goals">
+                        <button class="ob-option ob-card" data-value="sleep-better" role="checkbox" aria-checked="false" onclick="toggleGoal(this)"><span data-en="Sleep Better" data-ar="&#1575;&#1604;&#1606;&#1608;&#1605; &#1576;&#1588;&#1603;&#1604; &#1571;&#1601;&#1590;&#1604;">Sleep Better</span></button>
+                        <button class="ob-option ob-card" data-value="reduce-stress" role="checkbox" aria-checked="false" onclick="toggleGoal(this)"><span data-en="Reduce Stress" data-ar="&#1578;&#1602;&#1604;&#1610;&#1604; &#1575;&#1604;&#1578;&#1608;&#1578;&#1585;">Reduce Stress</span></button>
+                        <button class="ob-option ob-card" data-value="understand-body" role="checkbox" aria-checked="false" onclick="toggleGoal(this)"><span data-en="Understand My Body" data-ar="&#1601;&#1607;&#1605; &#1580;&#1587;&#1583;&#1610;">Understand My Body</span></button>
+                        <button class="ob-option ob-card" data-value="feel-less-alone" role="checkbox" aria-checked="false" onclick="toggleGoal(this)"><span data-en="Feel Less Alone" data-ar="&#1575;&#1604;&#1588;&#1593;&#1608;&#1585; &#1576;&#1571;&#1606;&#1606;&#1610; &#1604;&#1587;&#1578; &#1608;&#1581;&#1583;&#1610;">Feel Less Alone</span></button>
+                        <button class="ob-option ob-card" data-value="prepare-gp" role="checkbox" aria-checked="false" onclick="toggleGoal(this)"><span data-en="Prepare for GP Visits" data-ar="&#1575;&#1604;&#1575;&#1587;&#1578;&#1593;&#1583;&#1575;&#1583; &#1604;&#1586;&#1610;&#1575;&#1585;&#1575;&#1578; &#1575;&#1604;&#1591;&#1576;&#1610;&#1576;">Prepare for GP Visits</span></button>
+                        <button class="ob-option ob-card" data-value="daily-energy" role="checkbox" aria-checked="false" onclick="toggleGoal(this)"><span data-en="More Daily Energy" data-ar="&#1575;&#1604;&#1605;&#1586;&#1610;&#1583; &#1605;&#1606; &#1575;&#1604;&#1591;&#1575;&#1602;&#1577; &#1575;&#1604;&#1610;&#1608;&#1605;&#1610;&#1577;">More Daily Energy</span></button>
+                    </div>
+                    <div class="ob-nav">
+                        <button class="btn-text" onclick="prevOnboardingStep()" aria-label="Go back"><span data-en="Back" data-ar="&#1585;&#1580;&#1608;&#1593;">Back</span></button>
+                        <button class="btn-primary" onclick="nextOnboardingStep()" aria-label="Continue"><span data-en="Continue" data-ar="&#1575;&#1587;&#1578;&#1605;&#1585;&#1610;">Continue</span></button>
+                    </div>
+                </div>
+
+                <div class="onboarding-step hidden" data-step="5" role="tabpanel" aria-labelledby="ob-step-5">
+                    <div class="ob-top">
+                        <div class="ob-progress" role="progressbar" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100" aria-label="Onboarding progress">
+                            <div class="ob-progress-fill" style="width:56%"></div>
+                        </div>
+                        <h2 id="ob-step-5" data-en="A bit about your lifestyle" data-ar="&#1602;&#1604;&#1610;&#1604;&#1575;&#1611; &#1593;&#1606; &#1606;&#1605;&#1591; &#1581;&#1610;&#1575;&#1578;&#1603;">A bit about your lifestyle</h2>
+                    </div>
+                    <div class="ob-questions">
+                        <div class="ob-question">
+                            <label for="ob-sleep" data-en="How is your sleep generally?" data-ar="&#1603;&#1610;&#1601; &#1607;&#1608; &#1606;&#1608;&#1605;&#1603; &#1593;&#1605;&#1608;&#1605;&#1611;&#1575;&#1567;">How is your sleep generally?</label>
+                            <div class="ob-slider-group">
+                                <input type="range" min="1" max="5" value="3" class="ob-slider" id="ob-sleep" aria-label="Sleep quality rating" oninput="updateSliderLabel(this, 'ob-sleep-label')">
+                                <div class="ob-slider-labels">
+                                    <span data-en="Terrible" data-ar="&#1587;&#1610;&#1574; &#1580;&#1583;&#1575;&#1611;">Terrible</span>
+                                    <span id="ob-sleep-label" class="slider-value" aria-live="polite">3</span>
+                                    <span data-en="Great" data-ar="&#1605;&#1605;&#1578;&#1575;&#1586;">Great</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ob-question">
+                            <label for="ob-stress" data-en="How would you rate your stress?" data-ar="&#1603;&#1610;&#1601; &#1578;&#1602;&#1610;&#1610;&#1605;&#1610;&#1606; &#1605;&#1587;&#1578;&#1608;&#1609; &#1575;&#1604;&#1578;&#1608;&#1578;&#1585; &#1604;&#1583;&#1610;&#1603;&#1567;">How would you rate your stress?</label>
+                            <div class="ob-slider-group">
+                                <input type="range" min="1" max="5" value="3" class="ob-slider" id="ob-stress" aria-label="Stress level rating" oninput="updateSliderLabel(this, 'ob-stress-label')">
+                                <div class="ob-slider-labels">
+                                    <span data-en="Overwhelmed" data-ar="&#1605;&#1615;&#1606;&#1607;&#1603;">Overwhelmed</span>
+                                    <span id="ob-stress-label" class="slider-value" aria-live="polite">3</span>
+                                    <span data-en="Calm" data-ar="&#1607;&#1575;&#1583;&#1574;">Calm</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ob-question">
+                            <label data-en="Are you currently working with a GP?" data-ar="&#1607;&#1604; &#1578;&#1578;&#1593;&#1575;&#1605;&#1604;&#1610;&#1606; &#1581;&#1575;&#1604;&#1610;&#1611;&#1575; &#1605;&#1593; &#1591;&#1576;&#1610;&#1576; &#1593;&#1575;&#1605;&#1567;">Are you currently working with a GP?</label>
+                            <div class="ob-toggle-group" role="radiogroup" aria-label="GP involvement">
+                                <button class="ob-toggle" data-value="yes" role="radio" aria-checked="false" data-en="Yes" data-ar="&#1606;&#1593;&#1605;" onclick="selectToggle(this)">Yes</button>
+                                <button class="ob-toggle" data-value="no" role="radio" aria-checked="false" data-en="No" data-ar="&#1604;&#1575;" onclick="selectToggle(this)">No</button>
+                                <button class="ob-toggle" data-value="considering" role="radio" aria-checked="false" data-en="Considering" data-ar="&#1571;&#1601;&#1603;&#1585; &#1601;&#1610; &#1584;&#1604;&#1603;" onclick="selectToggle(this)">Considering</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ob-nav">
+                        <button class="btn-text" onclick="prevOnboardingStep()" aria-label="Go back"><span data-en="Back" data-ar="&#1585;&#1580;&#1608;&#1593;">Back</span></button>
+                        <button class="btn-primary" onclick="finishOnboarding()" aria-label="Create your personalised wellness space"><span data-en="Create My Space" data-ar="&#1571;&#1606;&#1588;&#1574;&#1610; &#1605;&#1587;&#1575;&#1581;&#1578;&#1610;">Create My Space</span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAIN APP -->
+        <main id="main-app" class="hidden" role="main" aria-label="Main application">
+
+            <!-- HOME -->
+            <section id="home" class="screen active" role="region" aria-label="Home Dashboard">
+                <div class="home-header">
+                    <div class="home-greeting">
+                        <p class="greeting-text" id="greeting-text" data-en="Good day," data-ar="&#1610;&#1608;&#1605; &#1587;&#1593;&#1610;&#1583;&#1548;">Good day,</p>
+                        <h2 class="user-name" id="user-name">Beautiful</h2>
+                        <p class="current-date" id="current-date" aria-live="polite"></p>
+                    </div>
+                    <button class="home-avatar" onclick="navigateTo('settings')" aria-label="Open settings">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </button>
+                </div>
+                <div class="dashboard-scroll">
+                    <div class="wellness-card gradient-lavender" role="region" aria-label="Today's wellness score">
+                        <div class="wellness-label" data-en="TODAY'S WELLNESS" data-ar="&#1593;&#1575;&#1601;&#1610;&#1577; &#1575;&#1604;&#1610;&#1608;&#1605;">TODAY'S WELLNESS</div>
+                        <div class="wellness-score">
+                            <span class="score-number" id="wellness-score" aria-live="polite">--</span>
+                            <span class="score-total">/100</span>
+                        </div>
+                        <p class="wellness-message" id="wellness-message" data-en="Loading your insights..." data-ar="&#1580;&#1575;&#1585;&#1610; &#1578;&#1581;&#1605;&#1610;&#1604; &#1585;&#1572;&#1575;&#1603;...">Loading your insights...</p>
+                        <div class="wellness-hormone">
+                            <span class="leaf" aria-hidden="true">&#127807;</span>
+                            <span id="hormone-insight" data-en="Tracking your patterns..." data-ar="&#1578;&#1578;&#1576;&#1593; &#1571;&#1606;&#1605;&#1575;&#1591;&#1603;...">Tracking your patterns...</span>
+                        </div>
+                    </div>
+                    <div class="stats-grid" role="region" aria-label="Quick stats">
+                        <button class="stat-card" onclick="navigateTo('tracker')" aria-label="Track sleep">
+                            <div class="stat-icon bg-moon" aria-hidden="true">&#127769;</div>
+                            <div class="stat-value" id="stat-sleep" aria-live="polite">--</div>
+                            <div class="stat-label" data-en="Sleep" data-ar="&#1575;&#1604;&#1606;&#1608;&#1605;">Sleep</div>
+                        </button>
+                        <button class="stat-card" onclick="navigateTo('tracker')" aria-label="Track mood">
+                            <div class="stat-icon bg-rose" aria-hidden="true">&#9786;</div>
+                            <div class="stat-value" id="stat-mood" aria-live="polite">--</div>
+                            <div class="stat-label" data-en="Mood" data-ar="&#1575;&#1604;&#1605;&#1586;&#1575;&#1580;">Mood</div>
+                        </button>
+                        <button class="stat-card" onclick="navigateTo('tracker')" aria-label="Track stress">
+                            <div class="stat-icon bg-peach" aria-hidden="true">&#128167;</div>
+                            <div class="stat-value" id="stat-stress" aria-live="polite">--</div>
+                            <div class="stat-label" data-en="Stress" data-ar="&#1575;&#1604;&#1578;&#1608;&#1578;&#1585;">Stress</div>
+                        </button>
+                        <button class="stat-card" onclick="navigateTo('tracker')" aria-label="Track water">
+                            <div class="stat-icon bg-sage" aria-hidden="true">&#128166;</div>
+                            <div class="stat-value" id="stat-water" aria-live="polite">--</div>
+                            <div class="stat-label" data-en="Water" data-ar="&#1575;&#1604;&#1605;&#1575;&#1569;">Water</div>
+                        </button>
+                    </div>
+                    <h3 class="section-title" data-en="For you today" data-ar="&#1605;&#1606; &#1571;&#1580;&#1604;&#1603; &#1575;&#1604;&#1610;&#1608;&#1605;">For you today</h3>
+                    <div class="action-cards" role="list">
+                        <button class="action-card" onclick="navigateTo('daily-plan')" role="listitem" aria-label="Your personalised daily plan">
+                            <div class="action-icon bg-sun" aria-hidden="true">&#9728;</div>
+                            <div class="action-info">
+                                <h4 data-en="Your personalised plan" data-ar="&#1582;&#1591;&#1578;&#1603; &#1575;&#1604;&#1605;&#1582;&#1589;&#1589;&#1577;">Your personalised plan</h4>
+                                <p data-en="Morning ritual &#183; nutrition &#183; movement &#183; sleep" data-ar="&#1591;&#1602;&#1608;&#1587; &#1575;&#1604;&#1589;&#1576;&#1575;&#1581; &#183; &#1575;&#1604;&#1578;&#1594;&#1584;&#1610;&#1577; &#183; &#1575;&#1604;&#1581;&#1585;&#1603;&#1577; &#183; &#1575;&#1604;&#1606;&#1608;&#1605;">Morning ritual &#183; nutrition &#183; movement &#183; sleep</p>
+                            </div>
+                            <span class="action-arrow" aria-hidden="true">&#8250;</span>
+                        </button>
+                        <button class="action-card" onclick="navigateTo('insights')" role="listitem" aria-label="AI health insights">
+                            <div class="action-icon bg-star" aria-hidden="true">&#10024;</div>
+                            <div class="action-info">
+                                <h4 data-en="AI health insights" data-ar="&#1585;&#1572;&#1609; &#1575;&#1604;&#1584;&#1603;&#1575;&#1569; &#1575;&#1604;&#1575;&#1589;&#1591;&#1606;&#1575;&#1593;&#1610; &#1575;&#1604;&#1589;&#1581;&#1610;&#1577;">AI health insights</h4>
+                                <p data-en="Patterns Luna noticed in your last 14 days" data-ar="&#1571;&#1606;&#1605;&#1575;&#1591; &#1604;&#1575;&#1581;&#1592;&#1578;&#1607;&#1575; &#1604;&#1608;&#1606;&#1575; &#1601;&#1610; &#1570;&#1582;&#1585; 14 &#1610;&#1608;&#1605;&#1611;&#1575;">Patterns Luna noticed in your last 14 days</p>
+                            </div>
+                            <span class="action-arrow" aria-hidden="true">&#8250;</span>
+                        </button>
+                        <button class="action-card" onclick="navigateTo('community')" role="listitem" aria-label="Community support">
+                            <div class="action-icon bg-people" aria-hidden="true">&#128101;</div>
+                            <div class="action-info">
+                                <h4 data-en="Community" data-ar="&#1575;&#1604;&#1605;&#1580;&#1578;&#1605;&#1593;">Community</h4>
+                                <p data-en="Anonymous stories, questions, and support" data-ar="&#1602;&#1589;&#1589; &#1608;&#1571;&#1587;&#1574;&#1604;&#1577; &#1608;&#1583;&#1593;&#1605; &#1605;&#1580;&#1607;&#1608;&#1604;">Anonymous stories, questions, and support</p>
+                            </div>
+                            <span class="action-arrow" aria-hidden="true">&#8250;</span>
+                        </button>
+                        <button class="action-card premium-glow" onclick="navigateTo('premium')" role="listitem" aria-label="Explore Lunara Premium">
+                            <div class="action-icon bg-crown" aria-hidden="true">&#11088;</div>
+                            <div class="action-info">
+                                <h4 data-en="Lunara Premium" data-ar="&#1604;&#1608;&#1606;&#1575;&#1585;&#1575; &#1576;&#1585;&#1610;&#1605;&#1610;&#1608;&#1605;">Lunara Premium</h4>
+                                <p data-en="Unlimited AI chat, deeper insights, and more" data-ar="&#1583;&#1585;&#1583;&#1588;&#1577; AI &#1594;&#1610;&#1585; &#1605;&#1581;&#1583;&#1608;&#1583;&#1577;&#1548; &#1585;&#1572;&#1609; &#1571;&#1593;&#1605;&#1602;&#1548; &#1608;&#1575;&#1604;&#1605;&#1586;&#1610;&#1583;">Unlimited AI chat, deeper insights, and more</p>
+                            </div>
+                            <span class="action-arrow" aria-hidden="true">&#8250;</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TRACKER -->
+            <section id="tracker" class="screen" role="region" aria-label="Symptom Tracker">
+                <div class="screen-header">
+                    <button class="back-btn" onclick="navigateTo('home')" aria-label="Go back to home">&#8249;</button>
+                    <h2 data-en="Track today" data-ar="&#1578;&#1578;&#1576;&#1593;&#1610; &#1575;&#1604;&#1610;&#1608;&#1605;">Track today</h2>
+                </div>
+                <p class="screen-subtitle" data-en="Small check-ins add up to real patterns." data-ar="&#1575;&#1604;&#1578;&#1587;&#1580;&#1610;&#1604;&#1575;&#1578; &#1575;&#1604;&#1589;&#1594;&#1610;&#1585;&#1577; &#1578;&#1578;&#1585;&#1575;&#1603;&#1605; &#1604;&#1578;&#1589;&#1576;&#1581; &#1571;&#1606;&#1605;&#1575;&#1591;&#1611;&#1575; &#1581;&#1602;&#1610;&#1602;&#1610;&#1577;.">Small check-ins add up to real patterns.</p>
+                <div class="tracker-scroll">
+                    <div class="tracker-card" role="region" aria-label="Weekly mood chart">
+                        <h3 data-en="Weekly mood" data-ar="&#1575;&#1604;&#1605;&#1586;&#1575;&#1580; &#1575;&#1604;&#1571;&#1587;&#1576;&#1608;&#1593;&#1610;">Weekly mood</h3>
+                        <div class="weekly-chart" id="weekly-chart" role="img" aria-label="Weekly mood chart">
+                            <div class="chart-loading" id="chart-loading">
+                                <div class="skeleton-bar" style="height:40%"></div>
+                                <div class="skeleton-bar" style="height:60%"></div>
+                                <div class="skeleton-bar" style="height:30%"></div>
+                                <div class="skeleton-bar" style="height:80%"></div>
+                                <div class="skeleton-bar" style="height:50%"></div>
+                                <div class="skeleton-bar" style="height:70%"></div>
+                                <div class="skeleton-bar" style="height:45%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tracker-card" role="region" aria-label="Daily tracking sliders">
+                        <h3 data-en="How you feel" data-ar="&#1603;&#1610;&#1601; &#1578;&#1588;&#1593;&#1585;&#1610;&#1606;">How you feel</h3>
+                        <div class="tracker-slider-group">
+                            <div class="tracker-slider-label">
+                                <label for="track-mood" data-en="Mood" data-ar="&#1575;&#1604;&#1605;&#1586;&#1575;&#1580;">Mood</label>
+                                <span id="val-mood" aria-live="polite">--</span>
+                            </div>
+                            <input type="range" min="1" max="5" class="tracker-slider mood-slider" id="track-mood" aria-label="Mood rating from 1 to 5" oninput="updateTrackerValue(this, 'val-mood', ['Very Low','Low','Neutral','Good','Excellent'])">
+                        </div>
+                        <div class="tracker-slider-group">
+                            <div class="tracker-slider-label">
+                                <label for="track-sleep" data-en="Sleep" data-ar="&#1575;&#1604;&#1606;&#1608;&#1605;">Sleep</label>
+                                <span id="val-sleep" aria-live="polite">--</span>
+                            </div>
+                            <input type="range" min="0" max="10" step="0.5" class="tracker-slider sleep-slider" id="track-sleep" aria-label="Sleep hours from 0 to 10" oninput="update*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 body{font-family:'Outfit',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overscroll-behavior-y:none;touch-action:manipulation;min-height:100vh;min-height:100dvh;overflow-x:hidden}
 body[data-lang="ar"]{font-family:'Noto Naskh Arabic','Outfit',serif}
